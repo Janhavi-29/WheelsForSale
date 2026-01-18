@@ -1,0 +1,668 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: #f4f4f4;
+    color: #333;
+    height: 100vh;
+    overflow: hidden; /* Disable body scroll */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(180deg, #2c3e50, #e74c3c);
+    color: white;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Allow sidebar to scroll if needed */
+}
+
+/* Sidebar Header */
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+/* Sidebar Links */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.3s, padding-left 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #c0392b;
+    color: white;
+    padding-left: 15px;
+}
+
+.sidebar ul li a.logout-btn {
+    background: #e74c3c;
+    color: white;
+    text-align: left;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background 0.3s, padding-left 0.3s;
+}
+
+.sidebar ul li a.logout-btn:hover {
+    background: #c0392b;
+    color: white;
+    padding-left: 15px;
+}
+
+/* Content Styles */
+.content {
+    margin-left: 300px;
+    padding: 30px 20px;  /* Added more top padding */
+    flex: 1;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: calc(100vh - 60px); /* Full height minus navbar height */
+    background: #ffffff;
+    position: relative;
+}
+
+/* Content Title */
+.content h1 {
+    margin-top: 3%;
+    font-size: 30px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+/* Section Handling */
+.section {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #e74c3c, #2c3e50);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.no-data {
+    text-align: center;
+    color: #e74c3c;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: #e74c3c;
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.navbar .admin-name {
+    font-size: 18px;
+    font-weight: normal;
+    margin-right: 20px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Content Styles */
+#contact {
+    padding: 30px 0px;
+    flex: 1;
+    background: #ffffff;
+    position: relative;
+}
+
+/* Contact Us Section Title */
+#contact h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Summary Card Styles for Contact Entries */
+.summary-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 130%;
+    max-width: 1130px;
+    margin-bottom: 30px;
+    
+}
+
+.summary-card h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.summary-card p {
+    font-size: 30px;
+    color: #e74c3c;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Table Styles */
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.contact-table th,
+.contact-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.contact-table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.contact-table td {
+    background-color: #f9f9f9;
+}
+
+.contact-table tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+.contact-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.contact-table a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.contact-table a:hover {
+    text-decoration: underline;
+}
+
+.contact-table .no-data {
+    text-align: center;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    #contact {
+        margin-left: 20px;
+        padding: 20px;
+    }
+
+    .summary-card {
+        width: 100%;
+    }
+
+    .contact-table th,
+    .contact-table td {
+        font-size: 14px;
+    }
+}
+
+
+
+/* Contact Us Table Styles
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.contact-table th,
+.contact-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.contact-table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.contact-table td {
+    background-color: #f9f9f9;
+}
+
+.contact-table .no-data {
+    text-align: center;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+ Scrollable Table Body 
+.contact-table tbody {
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.contact-table thead, .contact-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+ Total Count Card Styles 
+.total-count-card {
+    background-color: #ffffff;
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.total-count-card:hover {
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.total-count-card h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.total-count-card p {
+    font-size: 30px;
+    color: #e74c3c;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.count-cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+} */
+
+/* Add New Cars Form Styles */
+#addCars form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 60%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#addCars form label {
+    font-size: 16px;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#addCars form input,
+#addCars form select,
+#addCars form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+#addCars form input[type="file"] {
+    padding: 5px;
+    font-size: 14px;
+}
+
+#addCars form select {
+    font-size: 16px;
+}
+
+#addCars form button {
+    background: #e74c3c;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#addCars form button:hover {
+    background: #c0392b;
+}
+
+/* Adding Space for Better Form Alignment */
+#addCars form input,
+#addCars form select {
+    margin-bottom: 16px;
+}
+
+/* Second Hand Cars Form Styles */
+#secondhandcars form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 60%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#secondhandcars form label {
+    font-size: 16px;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#secondhandcars form input,
+#secondhandcars form select,
+#secondhandcars form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+#secondhandcars form input[type="file"] {
+    padding: 5px;
+    font-size: 14px;
+}
+
+#secondhandcars form select {
+    font-size: 16px;
+}
+
+#secondhandcars form button {
+    background: #e74c3c;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#secondhandcars form button:hover {
+    background: #c0392b;
+}
+
+/* Second Hand Cars Table Styles */
+.secondhand-cars-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.secondhand-cars-table th, .secondhand-cars-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.secondhand-cars-table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.secondhand-cars-table td {
+    background-color: #f9f9f9;
+}
+
+.secondhand-cars-table tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+.secondhand-cars-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.secondhand-cars-table a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.secondhand-cars-table a:hover {
+    text-decoration: underline;
+}
+
+.secondhand-cars-table .no-data {
+    text-align: center;
+    color: #e74c3c;
+}
+
+
+/* General Table Styling */
+.car-table {
+    width: 100%; /* Ensure table takes up full available width */
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.car-table th, .car-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.car-table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.car-table td {
+    background-color: #f9f9f9;
+}
+
+.car-table tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+.car-table tr:hover {
+    background-color: #ddd;
+}
+
+.car-table td[colspan="9"] {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+}
+
+/* Layout for Left and Right Div */
+.car-purchase-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%; /* Ensure the section takes full width */
+}
+
+.left-div, .right-div {
+    width: 100%; /* Ensure both sections take up the full available width */
+}
+
+/* Ensure table inside div takes full width */
+.left-div .car-table, .right-div .car-table {
+    width: 100%; /* Ensure tables inside both sections take full width */
+}
+
+.left-div h2, .right-div h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .car-purchase-section {
+        flex-direction: column;
+    }
+
+    .left-div, .right-div {
+        width: 100%; /* On smaller screens, each section takes up the full width */
+    }
+
+    /* Ensure table inside both divs also take full width on smaller screens */
+    .left-div .car-table, .right-div .car-table {
+        width: 100%;
+    }
+}
+
+
+

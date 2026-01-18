@@ -1,0 +1,89 @@
+/* Review Summary */
+.review-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allows the cards to wrap on smaller screens */
+    gap: 15px; /* Reduced space between cards */
+}
+
+/* Review Card */
+.review-card {
+    width: 24%; /* Further reduced width for smaller cards */
+    background-color: #fff;
+    padding: 10px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center;
+    transition: all 0.3s ease-in-out; /* Smooth hover transition */
+    cursor: pointer;
+    margin-bottom: 15px; /* Margin to separate the cards */
+    min-width: 150px; /* Ensure cards don't shrink too small */
+    height: 200px; /* Reduced height for smaller cards */
+    overflow: hidden; /* Hide content that overflows */
+}
+
+/* Hover effect for Review Card */
+.review-card:hover {
+    transform: translateY(-5px); /* Slightly lift card on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Title inside the Review Card */
+.review-card h3 {
+    font-size: 16px; /* Reduced font size */
+    color: #2c3e50;
+    margin-bottom: 8px; /* Reduced space between title and count */
+}
+
+/* Count inside the Review Card */
+.review-card .count {
+    font-size: 20px; /* Reduced font size */
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Icon inside the Review Card */
+.review-card .icon {
+    font-size: 35px; /* Reduced icon size */
+    color: #e74c3c;
+}
+
+/* Image Inside Review Card */
+.review-card img {
+    width: 100%;
+    height: auto;
+    max-height: 80px; /* Reduced max-height for smaller images */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Left Card (Happy Customers) */
+.review-card.left {
+    background-color: #27ae60; /* Green for Happy */
+    color: white;
+}
+
+.review-card.left .count {
+    color: #fff;
+}
+
+/* Center Card (Moderate Reviews) */
+.review-card.center {
+    background-color: #f39c12; /* Yellow for Moderate */
+    color: white;
+}
+
+.review-card.center .count {
+    color: #fff;
+}
+
+/* Right Card (Unhappy Customers) */
+.review-card.right {
+    background-color: #e74c3c; /* Red for Unhappy */
+    color: white;
+}
+
+.review-card.right .count {
+    color: #fff;
+}

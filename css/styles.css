@@ -1,0 +1,1305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #33333360;
+  color: white;
+  padding: 1rem;
+
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: red
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+}
+
+#section1 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1; 
+}
+
+#buycar { background:black; }
+#secondhandedcars { background: black; }
+#reviews { background: black; }
+#oursells { background: black; }
+#about { background: black; }
+#contact { background: white; }
+
+/* Centered Content */
+/* Home Section */
+#home {
+position: relative;
+height: 100vh; /* Full screen */
+overflow: hidden;
+}
+
+#background-video {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transform: translate(-50%, -50%);
+z-index: -1;
+}
+
+/* Centered Content (Website Name, Welcome Message, and Description) */
+/* Centered Content (Website Name, Welcome Message, and Description) */
+.home-content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+color: red;
+z-index: 10;
+}
+
+.home-content h1 {
+font-size: 5rem;
+margin-bottom: 0; /* Remove bottom margin to keep the title tight */
+font-weight: bold;
+white-space: nowrap; /* Ensure the text stays in one line */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.home-content p {
+font-size: 1.5rem;
+color: #fc6565;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Platform Icons - Left Bottom Corner */
+/* Platform Icons - Left Bottom Corner */
+.platform-icons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.platform-icons ion-icon {
+  font-size: 2rem; /* Adjust the size of the icons */
+  color: red;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.platform-icons ion-icon:hover {
+  transform: scale(1.2);
+  color: white;
+}
+
+
+/* Auth Buttons - Right Bottom Corner */
+.auth-buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+  }
+  .auth-buttons a{
+    text-decoration: none;
+  }
+  
+  .auth-buttons {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+    }
+    
+    .auth-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .green-btn {
+    background-color: #4CAF50; /* Green */
+    }
+    
+    .green-btn:hover {
+    background-color: #45a049;
+    }
+    
+    .blue-btn {
+    background-color: #2196F3; /* Blue */
+    }
+    
+    .blue-btn:hover {
+    background-color: #1976d2;
+    }
+
+/* Ensure home section covers the full screen */
+#home {
+position: relative;
+height: 100vh; /* Ensures it takes full screen height */
+overflow: hidden;
+}
+
+#background-video {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transform: translate(-50%, -50%);
+z-index: -1;
+}
+
+.red-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.red-btn:hover {
+  background-color: #d32f2f;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* Buy Car Section */
+#buycar {
+  padding: 50px 20px;
+  background: grey;
+  color: white;
+  text-align: center;
+  max-height: 100vh; /* Limits the height to the viewport height */
+  overflow-y: auto; /* Allows scrolling within the section if content overflows */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: red;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 10px; /* Reduced gap between cards in left and right direction */
+  justify-items: center;
+  width: 100%;
+  padding: 20px;
+  overflow: hidden; /* Ensures no overflow of cards */
+}
+
+
+/* Card Styling */
+.card {
+  display: flex;
+  flex-direction: row; /* Keep content horizontally */
+  justify-content: space-between; /* Distribute space between image, title, and button */
+  align-items: center; /* Center the content vertically */
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  border: 3px solid white;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Makes card fill available space */
+  max-width: 520px; /* Increased card width */
+  height: 250px; /* Adjusted card height */
+}
+
+/* Card Image */
+.card img {
+  width: 250px; /* Increased image width */
+  height: 250px; /* Increased image height */
+  object-fit: cover; /* Ensures image maintains aspect ratio */
+   /* Round shape for the image */
+  margin-left: 0px; /* Spacing from the left */
+}
+
+/* Card Content */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: center;
+  width: 100%; /* Ensures content takes up remaining space */
+  align-items: center;
+}
+
+
+/* Card Button */
+.buy-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color:#4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #45a049;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; /* 1 card per row for smaller screens */
+  }
+}
+
+
+
+
+/*---------------------------------------------------------------------------------------------------*/
+
+
+/* Second Handed Cars Section */
+#secondhandedcars {
+  background-color: #f4f4f4;
+  color: white;
+  padding: 50px 20px;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%; /* Full width of the container */
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+/* Best Week Sales Box */
+.best-week-sales {
+  background-color: #8bc34a; /* Green background */
+  padding: 20px;
+  text-align: left;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+/* Car Gallery Container */
+.car-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  overflow: hidden;
+  margin-top: 100px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  width: 80%; /* Ensure the gallery spans the full width */
+}
+
+/* Card Box Styling */
+.car-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  width: calc(33.33% - 20px); /* 3 items per row */
+  height: 500px; /* Fixed height */
+  text-align: center;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .car-box {
+    width: calc(50% - 20px); /* 2 items per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .car-box {
+    width: 100%; /* 1 item per row on small screens */
+  }
+}
+
+/* Image inside the car box */
+.car-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Car Details */
+.car-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+/* Car Info List */
+.car-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.car-details li {
+  margin-bottom: 10px;
+  color: #8bc34a;
+}
+
+.car-details strong {
+  color: red;
+}
+
+/* Buy Button Styling */
+.buy-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.buy-btn:hover {
+  background-color: #45a049;
+}
+
+/* Navigation Buttons for Carousel */
+.navigation-buttons {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  margin-top: 655px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+  background-color: #45a049;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+
+
+#reviews {
+  padding: 50px 0;
+  background-color: #f5f5dc;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.reviews-container {
+  display: flex;
+  width: 100%;
+  max-width: 1500px;
+  height: 500px;
+  gap: 20px; /* Space between left and right sections */
+  padding: 0;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+}
+
+.reviews-left {
+  width: 30%; /* Left div takes up 30% of the container */
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.reviews-box {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-left h2 {
+  font-size: 1.8rem;
+  color: #f80707;
+  margin-bottom: 10px;
+}
+
+.reviews-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reviews-list li {
+  margin-bottom: 5px;
+  background-color: #fff; /* Background color for each review box */
+  border: 1px solid #ddd; /* Border to separate reviews */
+  padding: 15px;
+  border-radius: 8px; /* Optional rounded corners for the boxes */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a light shadow to create separation */
+}
+
+.reviews-list li:hover {
+  background-color: #f1f1f1; /* Optional: hover effect for better visual feedback */
+}
+
+.reviews-list strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.reviews-list p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.reviews-right {
+  width: 65%; /* Right div takes up 65% of the container */
+  display: flex;
+  flex-direction: row; /* Arrange the boxes horizontally */
+  justify-content: space-between; /* Ensure they are spaced out evenly */
+  padding-left: 20px;
+  flex-wrap: wrap; /* Allow wrapping if space is tight */
+}
+
+.reviews-right h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px -20px;
+  width: 100%;
+}
+
+.review-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%; /* Adjust width to ensure 3 boxes fit horizontally */
+  margin-bottom: 20px; /* Space between boxes vertically */
+  padding: 20px;
+}
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.review-box h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.review-box p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+
+
+#oursells {
+  background-color: #f4f4f4;
+  padding: 50px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.sales-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 150px;
+  color: red;
+  border-bottom: 3px solid red;
+}
+
+.sells-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  border: 3px solid #333;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px; /* Added padding to prevent the image from touching the edges */
+}
+
+.sells-column {
+  flex: 1;
+  padding: 30px;
+  box-sizing: border-box;
+  border-left: 3px solid #333;
+  border-right: 3px solid #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.sells-column:first-child {
+  border-left: none;
+}
+
+.sells-column:last-child {
+  border-right: none;
+}
+
+.sells-column h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.count {
+  font-size: 2.5rem;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+/* Image Wrapper Adjustments */
+.image-wrapper {
+  position: absolute;
+  top: -130px; /* Lift the image above the column */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 90%; /* Image width inside the column (with some gap) */
+  max-width: 200px; /* Set a maximum width for the image */
+  height: 150px; /* Set a fixed height for consistency */
+  margin-left: 1px; /* Small gap between the image and the left border */
+  margin-right: 10px; /* Small gap between the image and the right border */
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  border-radius: 10px;
+}
+
+/* Column Image Adjustments */
+.column-image {
+  width: 100%; /* Ensure the image takes full width of the wrapper */
+  height: 100%; /* Ensure the image fills the height of the wrapper */
+  object-fit: cover; /* Maintains aspect ratio while filling the space */
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Maintain shadow for depth */
+}
+
+
+.sells-column img.column-image {
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .sells-container {
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .sells-column {
+    width: 100%;
+    margin-bottom: 20px;
+    border-left: none;
+    border-right: none;
+  }
+
+  .sells-column:not(:last-child) {
+    border-bottom: 3px solid #333;
+  }
+
+  .image-wrapper {
+    position: relative;
+    top: 0;
+    transform: translateX(0);
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sells-container {
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .sells-column {
+    width: 100%;
+    margin-bottom: 20px;
+    border-left: none;
+    border-right: none;
+  }
+
+  .sells-column:not(:last-child) {
+    border-bottom: 3px solid #333;
+  }
+
+  .image-wrapper {
+    position: relative;
+    top: 0;
+    transform: translateX(0);
+    width: 100%;
+  }
+}
+
+
+
+/*-----------------------------------------------------------------------------------*/
+
+
+
+/* About Us Section */
+#about {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  height: 100vh; /* Ensure it fits within the screen */
+  background-color: grey;
+}
+
+/* Left Div Styling (Updated width to 45%) */
+.about-left {
+  width: 50%;  /* Now it takes up 45% of the screen */
+  padding-right: 20px;
+  text-align: left;
+  overflow: hidden; /* Prevent overflow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  height: 100%; /* Ensure it takes up the full height */
+}
+
+/* About Us Title */
+.about-title {
+  font-size: 2.5rem;
+  color: red;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+/* Website Info (Justified Text) */
+.website-info p {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 20px;
+  text-align: justify; /* Justify the text for better readability */
+  line-height: 1.6;
+  text-indent: 2em; /* Optional: Indent the first line for better paragraph structure */
+}
+
+/* Read More Button */
+.read-more-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin-top: 20px;
+}
+
+.read-more-btn:hover {
+  background-color: #45a049;
+}
+
+/* Popup (Read More) */
+/* Popup (Read More) */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  text-align: center;
+  max-height: 80%; /* Limit max height */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+/* Title and Content of Popup */
+.popup h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.popup p {
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 15px;
+  text-align: justify; /* Justify the text inside the popup */
+  line-height: 1.6;
+  text-indent: 2em; /* Optional: Indent the first line for better paragraph structure */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: red;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.back-btn:hover {
+  background-color: #da190b;
+}
+
+
+/* Right Div Styling (Empty for now) */
+.about-right {
+  width: 55%; /* Take up the remaining space */
+  background-color: transparent;
+}
+
+@media (max-width: 1024px) {
+  #about {
+    flex-direction: column;
+  }
+
+  .about-left {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+  }
+
+  .about-left {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-right {
+    width: 100%;
+  }
+}
+
+.right-div {
+  width: 50%; /* Adjust this value as needed to fit your layout */
+  height: 100vh; /* Full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: gray; /* Or any other background you prefer */
+}
+
+.square-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.square-image {
+  width: 550px; /* Image size (square) */
+  height: 360px; /* Image size (square) */
+  object-fit: cover; /* Ensure the image covers the square area */
+  position: absolute;
+  margin-top: -5%;
+  top: 0px; /* Lift the image above the square */
+  z-index: 2;
+}
+
+.square {
+  width: 630px; /* Make the box wider than the image */
+  height: 300px; /* Make the box taller to match the image size */
+  background-color: #092542; /* Dark blue color */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15); /* Stronger lift effect with shadow */
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
+
+#contact-us {
+  padding: 40px;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+#contact-us h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#contact-us p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Contact Us Button */
+#contact-us-btn {
+  position: absolute;
+  margin-top: 140px;
+  margin-right: 15px;
+  top: 20px;
+  right: 20px;
+  background-color: #ffcc00;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact-us-btn:hover {
+  background-color: #e6b800;
+}
+
+/* Add Review Button */
+#add-review-btn {
+  position: absolute;
+  margin-top: 140px;
+  margin-right: 140px; /* Bring it closer to the Contact Us button */
+  top: 20px;
+  right: 80px; /* Positioning it closer to the Contact Us button */
+  background-color: #ffcc00; 
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-review-btn:hover {
+  background-color: #e6b800; /* Darker green on hover */
+}
+
+/* Movable Box Style */
+#movable-box {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #092542;
+  color: white;
+  width: 100vw;
+  height: 70vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Individual Section Styles */
+.box-section {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Left Section Styles */
+.left {
+  padding: 20px;
+  text-align: left;
+  margin-bottom: 10%;
+}
+
+.left h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  margin-left: -185px;
+  color: red;
+}
+
+.left p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Center Section Styles */
+.center {
+  padding: 20px;
+  text-align: left;
+}
+
+.center h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: red;
+}
+
+.brands-lists {
+  display: flex;
+  justify-content: space-between;
+  gap: 0px;
+  margin-top: 20px;
+}
+
+.brand-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.brand-list li {
+  font-size: 1.2rem;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* Right Section Styles */
+.right {
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.right h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: red;
+}
+
+.subscribe-btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #ffcc00;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #e6b800;
+}
+
+.email-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  resize: none;
+  min-height: 50px;
+}
+
+/* Popup Styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
+  backdrop-filter: blur(8px); /* Apply blur effect */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 40px; /* Increased padding */
+  width: 600px; /* Increased form size */
+  max-width: 90%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow to enhance visibility */
+}
+
+.popup-content h2 {
+  margin-bottom: 20px;
+}
+
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  padding: 15px; /* Increased padding for better spacing */
+  margin-bottom: 20px;
+  font-size: 1.2rem; /* Increased font size */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.popup-content button.submit-btn {
+  background-color: #ffcc00;
+  padding: 12px 24px; /* Increased button size */
+  font-size: 1.2rem; /* Larger text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-content button.submit-btn:hover {
+  background-color: green;
+}
+
+/* Back Button Styles */
+.back-btn {
+  background-color: #e90e0e; /* Light gray background */
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px; /* Space between back and submit button */
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: red;
+}
+
+.custom-alert {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50; /* Green for success */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+
+/* Rating Styles */
+/* Rating Styles */
+.rating {
+  display: flex;
+  align-items: center; /* Aligns the label and stars vertically */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.rating label {
+  font-size: 1.5rem; /* Increased font size for the label */
+  margin-right: 10px; /* Space between the label and stars */
+}
+
+.star {
+  font-size: 2.5rem; /* Increased size of the stars */
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.star:hover,
+.star.selected {
+  color: #ffcc00; /* Gold color for selected stars */
+}
+
+/* Increased font size for review name and star rating container */
+.popup-content input,
+.popup-content textarea {
+  font-size: 1.4rem; /* Increased font size for the input fields */
+  padding: 20px; /* Larger padding for better spacing */
+}
+
+.popup-content h2 {
+  font-size: 2.5rem; /* Increased size of the popup heading */
+  margin-bottom: 20px;
+}
+
+.popup-content label {
+  font-size: 1.4rem; /* Larger font size for labels */
+}
